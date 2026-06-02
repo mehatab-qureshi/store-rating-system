@@ -66,6 +66,31 @@ Single login system for all users. Role-based access control:
 
 ---
 
+##🗄️ Database Schema
+Users
+Field	Type
+id	SERIAL
+name	VARCHAR(60)
+email	VARCHAR(100)
+password	TEXT
+address	VARCHAR(400)
+role	VARCHAR(20)
+Stores
+Field	Type
+id	SERIAL
+name	VARCHAR(60)
+email	VARCHAR(100)
+address	VARCHAR(400)
+owner_id	INTEGER
+Ratings
+Field	Type
+id	SERIAL
+rating	INTEGER (1–5)
+user_id	INTEGER
+store_id	INTEGER
+
+---
+
 ## 🔑 Demo Credentials
 
 ### Admin
@@ -112,3 +137,13 @@ cd frontend
 npm install
 npm run dev
 ```
+
+## 👨‍💻 Author
+
+**Mehatab Qureshi**
+
+B.E. Computer Science
+
+Full Stack Developer
+
+GitHub: https://github.com/mehatab-qureshi
