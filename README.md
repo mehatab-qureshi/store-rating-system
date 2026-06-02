@@ -66,29 +66,28 @@ Single login system for all users. Role-based access control:
 
 ---
 
-##🗄️ Database Schema
-Users
-Field	Type
-id	SERIAL
-name	VARCHAR(60)
-email	VARCHAR(100)
-password	TEXT
-address	VARCHAR(400)
-role	VARCHAR(20)
-Stores
-Field	Type
-id	SERIAL
-name	VARCHAR(60)
-email	VARCHAR(100)
-address	VARCHAR(400)
-owner_id	INTEGER
-Ratings
-Field	Type
-id	SERIAL
-rating	INTEGER (1–5)
-user_id	INTEGER
-store_id	INTEGER
+## 🗄️ Database Schema
 
+### Users
+- id
+- name
+- email
+- password
+- address
+- role
+
+### Stores
+- id
+- name
+- email
+- address
+- owner_id
+
+### Ratings
+- id
+- rating
+- user_id
+- store_id
 ---
 
 ## 🔑 Demo Credentials
@@ -114,7 +113,7 @@ Password: Password@123
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/store-rating-system.git
+git clone git clone https://github.com/mehatab-qureshi/store-rating-system.git
 cd store-rating-system
 
 ## ▶️ How to Run Project
@@ -127,12 +126,17 @@ DB_NAME=your_db_name
 DB_HOST=localhost
 JWT_SECRET=your_jwt_secret
 
-### Backend
+## ▶️ Run Backend
+
 ```bash
 cd backend
 npm install
 npm run dev
+```
 
+## ▶️ Run Frontend
+
+```bash
 cd frontend
 npm install
 npm run dev
